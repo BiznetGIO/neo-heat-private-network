@@ -3,10 +3,6 @@ heat_template_version: 2016-10-14
 description: Template for networks
 
 parameters:
-  name:
-    type: string
-    label: Network name
-    description: Network name for private network
   dns:
     type: string
     label: DNS nameserver
@@ -28,7 +24,7 @@ resources:
   private_subnet:
     type: OS::Neutron::Subnet
     properties:
-      name: { get_param: name }
+      name: { get_param: stack_name }
       network_id: { get_resource: private_network }
       cidr: cidr
       dns_nameservers: dns
