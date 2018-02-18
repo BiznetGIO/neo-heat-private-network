@@ -20,6 +20,8 @@ parameters:
 resources:
   private_network:
     type: OS::Neutron::Net
+    properties:
+      name: { get_param: 'OS::stack_name' }
 
   private_subnet:
     type: OS::Neutron::Subnet
