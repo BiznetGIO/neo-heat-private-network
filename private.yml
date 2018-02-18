@@ -4,10 +4,10 @@ description: Template for networks
 
 parameters:
   dns:
-    type: string
+    type: comma_delimited_list
     label: DNS nameserver
-    description: DNS nameserver for private network
-    default: [8.8.8.8, 8.8.4.4]
+    description: DNS nameserver for private network (e.g. ["8.8.8.8","8.8.4.4"])
+    default: ["8.8.8.8", "8.8.4.4"]
   cidr:
     type: string
     label: Network address in CIDR 
