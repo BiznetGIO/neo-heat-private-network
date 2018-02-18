@@ -26,6 +26,6 @@ resources:
     properties:
       name: { get_param: stack_name }
       network_id: { get_resource: private_network }
-      cidr: cidr
-      dns_nameservers: dns
-      gateway_ip: gateway
+      cidr: { get_param: cidr }
+      dns_nameservers: { get_param: dns }
+      gateway_ip: { get_param: gateway }
