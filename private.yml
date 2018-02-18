@@ -6,8 +6,8 @@ parameters:
   dns:
     type: comma_delimited_list
     label: DNS nameserver
-    description: DNS nameserver for private network (e.g. ["8.8.8.8","8.8.4.4"])
-    default: ["8.8.8.8", "8.8.4.4"]
+    description: Comma separated list of DNS nameservers for the private network. (e.g. "8.8.8.8","8.8.4.4")
+    default: "8.8.8.8"
   cidr:
     type: string
     label: Network address in CIDR 
